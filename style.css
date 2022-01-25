@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=ubuntu');
+
+:root{
+  --color-lightwhite:#f2f3e2;
+  --color-gray:#777;
+  --color-gray-alpha:rgba(119,119,119,0.8);
+  --color-light:#f7f7e7;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+body{
+  font-family:'ubuntu',arial;
+  font-size:1rem;
+  color:var(--color-lightwhite);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-gray);
+  background-image: linear-gradient(
+      115deg,
+      rgba(64, 7, 95, 0.8),
+      rgba(119, 119, 119, 0.4)
+    ),
+    url(https://mcdn.wallpapersafari.com/medium/37/42/Gaq3Zf.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  width: 100%;
+  margin: 50px auto 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+h1 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+form {
+  background: var(--color-gray-alpha);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+}
+
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-light);
+  color: var(--color-gray);
+  border-radius: 2px;
+  cursor: pointer;
+}
